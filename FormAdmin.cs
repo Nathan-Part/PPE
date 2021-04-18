@@ -42,6 +42,7 @@ namespace PPE
             InitializeComponent();
             Niveau = Level;
             Nom = Name;
+            label1.Text = "Bienvenue " + Nom;
             MySqlConnection conn = new MySqlConnection(bdd);
             try
             {
@@ -149,6 +150,34 @@ namespace PPE
             }
             conn4.Close();
 
+            MySqlConnection connSalon = new MySqlConnection(bdd);
+            try
+            {
+                connSalon.Open();
+                string sqlSalon = "SELECT * FROM salons";
+                MySqlCommand cmd = new MySqlCommand(sqlSalon, connSalon);
+                MySqlDataReader compte = cmd.ExecuteReader();
+                while (compte.Read())
+                {
+                    if (dataGridView6.Columns.Count == 0)
+                    {
+                        dataGridView6.Columns.Add("id_salon", "ID");
+                        dataGridView6.Columns.Add("nom", "Nom");
+                        dataGridView6.Columns.Add("date_salon", "Date");
+                        dataGridView6.Columns.Add("lieu", "Lieu");
+                    }
+                    dataGridView6.Rows.Add(compte[0].ToString(), compte[1].ToString(), compte[2].ToString(), compte[3].ToString());
+
+                }
+                compte.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            connSalon.Close();
+
             MySqlConnection remarque = new MySqlConnection(bdd);
             try
             {
@@ -208,7 +237,7 @@ namespace PPE
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Votre niveau d'habilitation : " + Niveau + Environment.NewLine + "Votre nom : " + Nom);
+            MessageBox.Show("Votre niveau d'habilitation : " + Niveau + Environment.NewLine + "Votre nom : " + Nom, "Mes informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -261,6 +290,41 @@ namespace PPE
             var role = dataGridView1.CurrentRow.Cells["role"].Value.ToString();
             EditUser userEdit = new EditUser(login, nom, prenom, role);
             userEdit.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox5.Text.Length == 0 || textBox6.Text.Length == 0 || dateTimePicker1.Text.Length == 0)
+            {
+                MessageBox.Show("Vous n'avez pas remplie tout les champs !", "Champs vide", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                using (var insertSalon = new MySqlConnection(bdd))
+                {
+                    insertSalon.Open();
+
+                    String sql = "INSERT INTO salons(nom, date_salon, lieu) VALUES(@nom, @date, @lieu)";
+                    var ParametresRequetes = new DynamicParameters();
+                    ParametresRequetes.Add("nom", textBox5.Text);
+                    ParametresRequetes.Add("date", dateTimePicker1.Text);
+                    ParametresRequetes.Add("lieu", textBox6.Text);
+                    var ContexteUser = insertSalon.Query<salon>(sql, ParametresRequetes);
+                    MessageBox.Show("Salon " + textBox5.Text + " ajouté !");
+
+                    insertSalon.Close();
+                }
+            }
+        }
+
+        private void dataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var id = dataGridView6.CurrentRow.Cells["id_salon"].Value.ToString();
+            var nom = dataGridView6.CurrentRow.Cells["nom"].Value.ToString();
+            var date = dataGridView6.CurrentRow.Cells["date_salon"].Value.ToString();
+            var lieu = dataGridView6.CurrentRow.Cells["lieu"].Value.ToString();
+            EditSalon salonEdit = new EditSalon(id, nom, date, lieu);
+            salonEdit.Show();
         }
     }
 }

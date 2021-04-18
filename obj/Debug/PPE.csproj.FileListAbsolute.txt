@@ -119,3 +119,4 @@ C:\Users\nathan\source\repos\PPE\obj\Debug\PPE.Bout.resources
 C:\Users\nathan\source\repos\PPE\bin\Debug\MySql.Data.dll
 C:\Users\nathan\source\repos\PPE\bin\Debug\Ubiety.Dns.Core.dll
 C:\Users\nathan\source\repos\PPE\bin\Debug\Zstandard.Net.dll
+C:\Users\nathan\source\repos\PPE\obj\Debug\PPE.EditSalon.resources

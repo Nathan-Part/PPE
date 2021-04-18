@@ -123,11 +123,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="All.cs" />
     <Compile Include="Bout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Bout.Designer.cs">
       <DependentUpon>Bout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSalon.Designer.cs">
+      <DependentUpon>EditSalon.cs</DependentUpon>
     </Compile>
     <Compile Include="EditUser.cs">
       <SubType>Form</SubType>
@@ -159,6 +166,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="participant.cs" />
     <Compile Include="Pdf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,10 +181,14 @@
     <Compile Include="Remarque.Designer.cs">
       <DependentUpon>Remarque.cs</DependentUpon>
     </Compile>
+    <Compile Include="salon.cs" />
     <Compile Include="SHA.cs" />
     <Compile Include="user.cs" />
     <EmbeddedResource Include="Bout.resx">
       <DependentUpon>Bout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSalon.resx">
+      <DependentUpon>EditSalon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditUser.resx">
       <DependentUpon>EditUser.cs</DependentUpon>
