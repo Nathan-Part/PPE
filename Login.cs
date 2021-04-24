@@ -14,11 +14,10 @@ namespace PPE
 {
     public partial class Login : Form
     {
-        string bdd = "server=localhost;user id=Nathan;database=ppe;Pwd=azerty";
         public String level = "";
         public String nom = "";
         public String id = "";
-
+     
         public string nameEchec { get; set; }
         public int countEchec { get; set; }
 
@@ -39,7 +38,7 @@ namespace PPE
             if (IsNull(textBox1.Text))
             {
                 //On verifie la coherence de login/pass
-                using (var connection = new MySqlConnection(bdd))
+                using (var connection = new MySqlConnection(All.Bdd))
                 {
                     connection.Open();
                     String leLogin = textBox1.Text;
@@ -68,7 +67,7 @@ namespace PPE
                         int nbEssai = 5 - countEchec;
                         nameEchec = textBox1.Text;
 
-                        using (var connection2 = new MySqlConnection(bdd))
+                        using (var connection2 = new MySqlConnection(All.Bdd))
                         {
                             connection2.Open();
                             String sql2 = "INSERT INTO log_echec_connexion(login, heure_tentative) VALUES(@login, now())";

@@ -44,10 +44,10 @@ namespace PPE
             gfx.DrawString("SIO3", fontbarcode, XBrushes.Black, new XRect(50, 50, page.Width, page.Height), XStringFormats.Center);
 
             XImage image = XImage.FromGdiPlusImage(pictureBox1.Image);
-
+            
             // left position in point
             double x = (250 - image.PixelWidth * 72 / image.HorizontalResolution) / 2;
-            gfx.DrawImage(image, x, 0);
+            gfx.DrawImage(image, 0, 0);
 
 
             // on enregistre le document 

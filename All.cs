@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace PPE
 {
-    static class All
-    {
-        static string test = "test";
+    public class All
+    {   
+        private static string bdd = "server=localhost;user id=Nathan;database=ppe;Pwd=azerty";
+
+        public static string Bdd
+        {
+            get { return bdd; }
+            set { bdd = value; }
+        }
+
     }
 }

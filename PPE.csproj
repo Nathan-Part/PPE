@@ -130,6 +130,12 @@
     <Compile Include="Bout.Designer.cs">
       <DependentUpon>Bout.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditParticipant.Designer.cs">
+      <DependentUpon>EditParticipant.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditSalon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     <Compile Include="user.cs" />
     <EmbeddedResource Include="Bout.resx">
       <DependentUpon>Bout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditParticipant.resx">
+      <DependentUpon>EditParticipant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditSalon.resx">
       <DependentUpon>EditSalon.cs</DependentUpon>

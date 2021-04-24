@@ -117,29 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAD/////////////////////////////////////////////////////////////////////////////
-        //////////////////////////////////////////////////////////////////////////////v9
-        ///7/P//////////////////0tvj/6eoqv+pqan/qKmp/6enp/+rqqn/wby5/+nk3//+/fz//////9ju
-        //9cq///XqP//9vh/////////////7HCz/9WXGL/QEFD/05KR/9ta2n/XmBi/01OT/9iW1f/vrGj///9
-        9/+n2v//A33//wd3//+uw//////////////8/f7/rbvJ/0BHTf9xYlf/8OPa/+vu8P+quMP/SVBY/1hP
-        SP/czr3/7fn//5rK//+cwv//7e///////////////////7XE0/9AR07/dGNY//rs4v//////8Pf+/2h2
-        if9CQD3/taOP//////////////////////////////////////+1xNP/QEdO/3RkWP/67eP//////+Xv
-        9/9fbH3/RUE+/8GunP//////////////////////////////////////tcTT/0FITv9iWFD/ubCq/7O2
-        uf93gYr/SElL/31wZv/v5tv//////////////////////////////////////7XE0/9CSU//SEZF/1FR
-        UP9HSUv/RkNC/5KGef/t5t7///////////////////////////////////////////+1xNP/QEdO/2xe
-        VP/b0Mj/ucLK/1pkbv9iWlL/2Mu8////////////////////////////////////////////tcTT/0BH
-        Tv90Y1j/+uzj//////+Pobf/Pj9B/5F/bf/++vP//////////////////////////////////////7XE
-        0/9AR07/dGNY//rt4//z+P7/fY2g/z4/QP+Id2b//fnw/////////////////////////////////8nT
-        3f9qc3v/P0JE/1VOSf+LhoL/cXh9/0ZJTP9UT0n/xLWk/////v//////////////////////////////
-        ///Dztn/e3+C/3Z2dv90dHX/cnJy/3h2dP+ZlI//0svD//379///////////////////////////////
-        /////////v7+//v7/P/5+fr/+fn5//n5+f/6+vr//v79////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////
-        ////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAA==
-</value>
-  </data>
 </root>
