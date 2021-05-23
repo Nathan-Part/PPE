@@ -52,10 +52,5 @@ namespace PPE
             formRemarque.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Bout boutForm = new Bout();
-            boutForm.ShowDialog();
-        }
     }
 }

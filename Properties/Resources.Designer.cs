@@ -63,9 +63,9 @@ namespace PPE.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap usqktvagoiljf7dm2nhz64brpe809y13cx5w {
+        internal static System.Drawing.Bitmap logo_pdf_removebg_preview {
             get {
-                object obj = ResourceManager.GetObject("usqktvagoiljf7dm2nhz64brpe809y13cx5w", resourceCulture);
+                object obj = ResourceManager.GetObject("logo-pdf-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

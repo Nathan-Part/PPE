@@ -326,5 +326,36 @@ namespace PPE
             EditSalon salonEdit = new EditSalon(id, nom, date, lieu);
             salonEdit.Show();
         }
+
+        private void tabControl3_Click(object sender, EventArgs e)
+        {
+            MySqlConnection connSalon = new MySqlConnection(bdd);
+            try
+            {
+                connSalon.Open();
+                string sqlSalon = "SELECT * FROM salons";
+                MySqlCommand cmd = new MySqlCommand(sqlSalon, connSalon);
+                MySqlDataReader compte = cmd.ExecuteReader();
+                while (compte.Read())
+                {
+                    if (dataGridView6.Columns.Count == 0)
+                    {
+                        dataGridView6.Columns.Add("id_salon", "ID");
+                        dataGridView6.Columns.Add("nom", "Nom");
+                        dataGridView6.Columns.Add("date_salon", "Date");
+                        dataGridView6.Columns.Add("lieu", "Lieu");
+                    }
+                    dataGridView6.Rows.Add(compte[0].ToString(), compte[1].ToString(), compte[2].ToString(), compte[3].ToString());
+
+                }
+                compte.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            connSalon.Close(); 
+        }
     }
 }

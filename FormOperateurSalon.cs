@@ -14,8 +14,8 @@ namespace PPE
 {
     public partial class FormOperateurSalon : Form
     {
-        string bdd = "server=localhost;user id=Nathan;database=ppe;Pwd=azerty";
-
+        string bdd = All.Bdd;
+        
         String Niveau;
         String Nom;
         public FormOperateurSalon(String Level, String Name)
@@ -25,35 +25,35 @@ namespace PPE
             Nom = Name;
             label1.Text = "Bienvenue " + Nom;
 
-                MySqlConnection connParticipant = new MySqlConnection(bdd);
-                try
+            MySqlConnection connParticipant = new MySqlConnection(bdd);
+            try
+            {
+                connParticipant.Open();
+                string sqlSalon = "SELECT * FROM participant";
+                MySqlCommand cmd = new MySqlCommand(sqlSalon, connParticipant);
+                MySqlDataReader compte = cmd.ExecuteReader();
+                while (compte.Read())
                 {
-                    connParticipant.Open();
-                    string sqlSalon = "SELECT * FROM participant";
-                    MySqlCommand cmd = new MySqlCommand(sqlSalon, connParticipant);
-                    MySqlDataReader compte = cmd.ExecuteReader();
-                    while (compte.Read())
+                    if (dataGridView1.Columns.Count == 0)
                     {
-                        if (dataGridView1.Columns.Count == 0)
-                        {
-                            dataGridView1.Columns.Add("ID", "ID");
-                            dataGridView1.Columns.Add("prenom", "Prenom");
-                            dataGridView1.Columns.Add("nom", "Nom");
-                            dataGridView1.Columns.Add("departement", "Departement");
-                            dataGridView1.Columns.Add("email", "Email");
-                        }
-                        dataGridView1.Rows.Add(compte[0].ToString(), compte[1].ToString(), compte[2].ToString(), compte[3].ToString(), compte[4].ToString());
-
+                        dataGridView1.Columns.Add("ID", "ID");
+                        dataGridView1.Columns.Add("prenom", "Prenom");
+                        dataGridView1.Columns.Add("nom", "Nom");
+                        dataGridView1.Columns.Add("departement", "Departement");
+                        dataGridView1.Columns.Add("email", "Email");
                     }
-                    compte.Close();
-                }
+                    dataGridView1.Rows.Add(compte[0].ToString(), compte[1].ToString(), compte[2].ToString(), compte[3].ToString(), compte[4].ToString());
 
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
                 }
-                connParticipant.Close();
-            
+                compte.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            connParticipant.Close();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -113,5 +113,6 @@ namespace PPE
                 }
             }
         }
+
     }
 }

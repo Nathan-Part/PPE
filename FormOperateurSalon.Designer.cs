@@ -32,31 +32,30 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOperateurSalon));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl5 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1.SuspendLayout();
             this.tabControl5.SuspendLayout();
+            this.tabPage13.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage13.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -80,16 +79,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Formulaire Opérateur de salon";
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 99);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1279, 450);
-            this.tabControl1.TabIndex = 3;
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.tabControl5);
@@ -111,50 +100,6 @@
             this.tabControl5.Size = new System.Drawing.Size(1253, 400);
             this.tabControl5.TabIndex = 12;
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.textBox5);
-            this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1245, 367);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "Participants";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 7);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 20);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Rechercher";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(7, 31);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(193, 26);
-            this.textBox5.TabIndex = 2;
-            this.textBox5.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyUp);
-            // 
-            // dataGridView1
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 65);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1231, 283);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // tabPage13
             // 
             this.tabPage13.Controls.Add(this.button4);
@@ -175,71 +120,21 @@
             this.tabPage13.Text = "Ajouter un participant";
             this.tabPage13.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // textBox1
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1271, 417);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Générer une fiche d’identification";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(360, 141);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(205, 26);
+            this.textBox1.TabIndex = 38;
             // 
-            // label3
+            // textBox2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(356, 78);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 20);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "Ajouter un participant";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(355, 182);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 20);
-            this.label2.TabIndex = 45;
-            this.label2.Text = "Departement";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(623, 182);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 20);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "Email";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(627, 207);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(204, 26);
-            this.textBox4.TabIndex = 43;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(360, 207);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(205, 26);
-            this.textBox3.TabIndex = 42;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(623, 117);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 20);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Prenom";
+            this.textBox2.Location = new System.Drawing.Point(627, 141);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(204, 26);
+            this.textBox2.TabIndex = 39;
             // 
             // label5
             // 
@@ -251,21 +146,61 @@
             this.label5.TabIndex = 40;
             this.label5.Text = "Nom";
             // 
-            // textBox2
+            // label6
             // 
-            this.textBox2.Location = new System.Drawing.Point(627, 141);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(204, 26);
-            this.textBox2.TabIndex = 39;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(623, 117);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 20);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Prenom";
             // 
-            // textBox1
+            // textBox3
             // 
-            this.textBox1.Location = new System.Drawing.Point(360, 141);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(205, 26);
-            this.textBox1.TabIndex = 38;
+            this.textBox3.Location = new System.Drawing.Point(360, 207);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(205, 26);
+            this.textBox3.TabIndex = 42;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(627, 207);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(204, 26);
+            this.textBox4.TabIndex = 43;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(623, 182);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 20);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Email";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(355, 182);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 20);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "Departement";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(356, 78);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 20);
+            this.label3.TabIndex = 46;
+            this.label3.Text = "Ajouter un participant";
             // 
             // button4
             // 
@@ -277,6 +212,59 @@
             this.button4.Text = "Ajouter le participant";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.textBox5);
+            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1245, 367);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "Participants";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 65);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1231, 283);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(7, 31);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(193, 26);
+            this.textBox5.TabIndex = 2;
+            this.textBox5.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyUp);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 7);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 20);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Rechercher";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Location = new System.Drawing.Point(12, 99);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1279, 450);
+            this.tabControl1.TabIndex = 3;
             // 
             // FormOperateurSalon
             // 
@@ -290,14 +278,14 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormOperateurSalon";
             this.Text = "Opérateur de salon";
-            this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl5.ResumeLayout(false);
+            this.tabPage13.ResumeLayout(false);
+            this.tabPage13.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage13.ResumeLayout(false);
-            this.tabPage13.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,15 +294,14 @@
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl5;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabPage13;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
@@ -324,6 +311,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TabControl tabControl1;
     }
 }

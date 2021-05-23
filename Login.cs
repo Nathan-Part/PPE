@@ -24,6 +24,8 @@ namespace PPE
         public Login()
         {
             InitializeComponent();
+            textBox1.Text = "Nathan";
+            textBox2.Text = "mdp";
         }
         public bool IsNull(string champ)
         {
