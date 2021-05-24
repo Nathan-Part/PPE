@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
@@ -75,7 +74,6 @@
             this.tabPage12 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tabPage8.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage10.SuspendLayout();
@@ -315,7 +313,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(40)))), ((int)(((byte)(46)))));
+            this.tabPage3.BackColor = System.Drawing.Color.Transparent;
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage3.Controls.Add(this.tabControl5);
             this.tabPage3.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -331,7 +329,6 @@
             // 
             this.tabControl5.Controls.Add(this.tabPage2);
             this.tabControl5.Controls.Add(this.tabPage13);
-            this.tabControl5.ImageList = this.imageList1;
             this.tabControl5.Location = new System.Drawing.Point(7, 8);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
@@ -378,6 +375,7 @@
             this.tabPage13.Controls.Add(this.label3);
             this.tabPage13.Controls.Add(this.label4);
             this.tabPage13.Controls.Add(this.textBox1);
+            this.tabPage13.ForeColor = System.Drawing.Color.White;
             this.tabPage13.Location = new System.Drawing.Point(4, 29);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
@@ -396,6 +394,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(623, 154);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -406,6 +405,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(357, 69);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -416,6 +416,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(357, 154);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -463,6 +464,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(623, 69);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -473,6 +475,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(357, 222);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -566,12 +569,6 @@
             this.tabControl1.Size = new System.Drawing.Size(1275, 449);
             this.tabControl1.TabIndex = 4;
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Maroon;
-            this.imageList1.Images.SetKeyName(0, "images.jpg");
-            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -659,7 +656,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
