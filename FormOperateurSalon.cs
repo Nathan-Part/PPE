@@ -58,7 +58,7 @@ namespace PPE
 
         private void button1_Click(object sender, EventArgs e)
         {
-             MessageBox.Show("Votre niveau d'habilitation : " + Niveau + Environment.NewLine + "Votre nom : " + Nom, "Mes informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             MessageBox.Show("Votre niveau d'habilitation : " + Niveau + Environment.NewLine + "Votre login : " + Nom, "Mes informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void textBox5_KeyUp(object sender, KeyEventArgs e)

@@ -237,7 +237,7 @@ namespace PPE
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Votre niveau d'habilitation : " + Niveau + Environment.NewLine + "Votre nom : " + Nom, "Mes informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Votre niveau d'habilitation : " + Niveau + Environment.NewLine + "Votre login : " + Nom, "Mes informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -258,7 +258,7 @@ namespace PPE
             int idType = MaComboValue.Value;
             if (textBox1.Text.Length == 0 || textBox2.Text.Length == 0 || textBox3.Text.Length == 0 || textBox4.Text.Length == 0 || comboBox1.Text.Length == 0) 
             {
-                MessageBox.Show("Vous n'avez pas remplie tout les champs !");    
+                MessageBox.Show("Vous n'avez pas remplie tout les champs !", "Champs vide", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else 
             {
