@@ -30,6 +30,9 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage8 = new System.Windows.Forms.TabPage();
@@ -76,6 +79,8 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.button3 = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage8.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage10.SuspendLayout();
@@ -99,6 +104,8 @@
             this.tabPage12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -366,7 +373,7 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 8);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 11);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
@@ -595,6 +602,7 @@
             this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(18, 98);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Name = "tabControl1";
@@ -621,6 +629,32 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button1_Click);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.chart1);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1267, 416);
+            this.tabPage4.TabIndex = 6;
+            this.tabPage4.Text = "graphique";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(28, 47);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Connexion";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(664, 300);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -634,6 +668,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormAdmin";
             this.Text = "Formulaire Admin";
+            this.Load += new System.EventHandler(this.FormAdmin_Load);
             this.tabPage8.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage10.ResumeLayout(false);
@@ -659,6 +694,8 @@
             this.tabPage12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -710,6 +747,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 

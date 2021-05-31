@@ -14,7 +14,6 @@ namespace PPE
 {
     public partial class Remarque : Form
     {
-        string bdd = "server=localhost;user id=Nathan;database=ppe;Pwd=azerty";
         public string Nom { get; set; }
         public int Id { get; set; }
         public Remarque(String Role, String User, int IdUtilisateur)
@@ -26,7 +25,7 @@ namespace PPE
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (var connection = new MySqlConnection(bdd))
+            using (var connection = new MySqlConnection(All.Bdd))
             {
                 connection.Open();
 

@@ -15,7 +15,6 @@ namespace PPE
 {
     public partial class FormAdmin : Form
     {
-        string bdd = "server=localhost;user id=Nathan;database=ppe;Pwd=azerty";
 
         class ComboValue
         {
@@ -43,7 +42,7 @@ namespace PPE
             Niveau = Level;
             Nom = Name;
             label1.Text = "Bienvenue " + Nom;
-            MySqlConnection conn = new MySqlConnection(bdd);
+            MySqlConnection conn = new MySqlConnection(All.Bdd);
             try
             {
                 conn.Open();
@@ -67,7 +66,7 @@ namespace PPE
             }
             conn.Close();
 
-            MySqlConnection conn2 = new MySqlConnection(bdd);
+            MySqlConnection conn2 = new MySqlConnection(All.Bdd);
             try
             {
                 conn2.Open();
@@ -96,7 +95,7 @@ namespace PPE
             }
             conn2.Close();
 
-            MySqlConnection conn3 = new MySqlConnection(bdd);
+            MySqlConnection conn3 = new MySqlConnection(All.Bdd);
             try
             {
                 conn3.Open();
@@ -124,11 +123,11 @@ namespace PPE
             }
             conn3.Close();
 
-            MySqlConnection conn4= new MySqlConnection(bdd);
+            MySqlConnection conn4= new MySqlConnection(All.Bdd);
             try
             {
                 conn4.Open();
-                string sql4 = "SELECT * FROM `log_echec_connexion`";
+                string sql4 = "SELECT login, heure_tentative FROM `log_echec_connexion` WHERE heure_tentative >= DATE_SUB(DATE(NOW()), INTERVAL 3 DAY)";
                 MySqlCommand cmd2 = new MySqlCommand(sql4, conn4);
                 MySqlDataReader log = cmd2.ExecuteReader();
                 while (log.Read())
@@ -138,8 +137,7 @@ namespace PPE
                         dataGridView3.Columns.Add("login", "Login");
                         dataGridView3.Columns.Add("heure_tentative", "Date et heure de la tentative de connexion");
                     }
-                    dataGridView3.Rows.Add(log[1].ToString(), log[2].ToString());
-
+                    dataGridView3.Rows.Add(log[0].ToString(), log[1].ToString()); 
                 }
                 log.Close();
             }
@@ -150,7 +148,7 @@ namespace PPE
             }
             conn4.Close();
 
-            MySqlConnection connSalon = new MySqlConnection(bdd);
+            MySqlConnection connSalon = new MySqlConnection(All.Bdd);
             try
             {
                 connSalon.Open();
@@ -178,7 +176,7 @@ namespace PPE
             }
             connSalon.Close();
 
-            MySqlConnection remarque = new MySqlConnection(bdd);
+            MySqlConnection remarque = new MySqlConnection(All.Bdd);
             try
             {
                 remarque.Open();
@@ -206,7 +204,7 @@ namespace PPE
             }
             remarque.Close();
 
-            MySqlConnection remarque2 = new MySqlConnection(bdd);
+            MySqlConnection remarque2 = new MySqlConnection(All.Bdd);
             try
             {
                 remarque2.Open();
@@ -234,7 +232,54 @@ namespace PPE
             }
             remarque2.Close();
 
+            MySqlConnection rem = new MySqlConnection(All.Bdd);
+            try
+            {
+                remarque2.Open();
+                string sql6 = "SELECT CAST(date_connexion AS date) AS date_connexion, count(*) as nbConnexion FROM `log_connexion` INNER JOIN user ON fk_user = id WHERE date_connexion >= DATE_SUB(DATE(NOW()), INTERVAL 5 DAY) GROUP BY DATE(date_connexion) HAVING nbConnexion > 0 ORDER BY date_connexion DESC";
+                MySqlCommand cmd = new MySqlCommand(sql6, remarque2);
+                MySqlDataReader compte = cmd.ExecuteReader();
+                while (compte.Read())
+                {
+                    if (dataGridView5.Columns.Count == 0)
+                    {
+                        dataGridView5.Columns.Add("date_connexion", "Date");
+                        dataGridView5.Columns.Add("nbConnexion", "Nombre connexion");
+                    }
+                    dataGridView5.Rows.Add(compte[0].ToString(), compte[1].ToString());
+
+                }
+                compte.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            remarque2.Close();
         }
+
+        private void FormAdmin_Load(object sender, EventArgs e)
+        {
+            fillChart();
+        }
+
+        private void fillChart()
+        {
+            MySqlConnection con = new MySqlConnection(All.Bdd);
+            DataSet ds = new DataSet();
+            con.Open();
+            MySqlDataAdapter adapt = new MySqlDataAdapter("SELECT date_connexion, count(*) as nbConnexion FROM `log_connexion` INNER JOIN user ON fk_user = id WHERE date_connexion >= DATE_SUB(DATE(NOW()), INTERVAL 2 DAY) GROUP BY DATE(date_connexion) HAVING nbConnexion > 0 ORDER BY date_connexion DESC", con);
+            adapt.Fill(ds);
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                DateTime maDate = DateTime.Parse(dr["date_connexion"].ToString());
+                chart1.Series["Connexion"].Points.AddXY(maDate.ToString("d"), dr["nbConnexion"]); 
+            }
+            con.Close();
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Votre niveau d'habilitation : " + Niveau + Environment.NewLine + "Votre login : " + Nom, "Mes informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -262,7 +307,7 @@ namespace PPE
             }
             else 
             {
-                using (var connection = new MySqlConnection(bdd))
+                using (var connection = new MySqlConnection(All.Bdd))
                 {
                     connection.Open();
 
@@ -300,7 +345,7 @@ namespace PPE
             }
             else
             {
-                using (var insertSalon = new MySqlConnection(bdd))
+                using (var insertSalon = new MySqlConnection(All.Bdd))
                 {
                     insertSalon.Open();
 
@@ -329,7 +374,7 @@ namespace PPE
 
         private void tabControl3_Click(object sender, EventArgs e)
         {
-            MySqlConnection connSalon = new MySqlConnection(bdd);
+            MySqlConnection connSalon = new MySqlConnection(All.Bdd);
             try
             {
                 connSalon.Open();
@@ -357,5 +402,6 @@ namespace PPE
             }
             connSalon.Close(); 
         }
+
     }
 }

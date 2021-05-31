@@ -14,8 +14,6 @@ namespace PPE
 {
     public partial class FormOperateurSalon : Form
     {
-        string bdd = All.Bdd;
-        
         String Niveau;
         String Nom;
         public FormOperateurSalon(String Level, String Name)
@@ -25,7 +23,7 @@ namespace PPE
             Nom = Name;
             label1.Text = "Bienvenue " + Nom;
 
-            MySqlConnection connParticipant = new MySqlConnection(bdd);
+            MySqlConnection connParticipant = new MySqlConnection(All.Bdd);
             try
             {
                 connParticipant.Open();
@@ -63,7 +61,7 @@ namespace PPE
 
         private void textBox5_KeyUp(object sender, KeyEventArgs e)
         {
-            using (var connection = new MySqlConnection(bdd))
+            using (var connection = new MySqlConnection(All.Bdd))
             {
                 connection.Open();
                 dataGridView1.Columns.Clear();

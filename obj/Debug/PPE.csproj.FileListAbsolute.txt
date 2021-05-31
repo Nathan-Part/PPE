@@ -150,3 +150,7 @@ C:\Users\natou\source\repos\PPE\obj\Debug\PPE.csproj.CopyComplete
 C:\Users\natou\source\repos\PPE\obj\Debug\PPE.exe
 C:\Users\natou\source\repos\PPE\obj\Debug\PPE.pdb
 C:\Users\natou\source\repos\PPE\obj\Debug\PPE.csprojAssemblyReference.cache
+C:\Users\natou\source\repos\PPE\obj\Debug\PPE.exe.manifest
+C:\Users\natou\source\repos\PPE\bin\Debug\PPE.exe.manifest
+C:\Users\natou\source\repos\PPE\bin\Debug\PPE.application
+C:\Users\natou\source\repos\PPE\obj\Debug\PPE.application

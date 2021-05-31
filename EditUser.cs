@@ -16,9 +16,7 @@ namespace PPE
         String identifiant;
         String lastName;
         String firstName;
-        String type;
-
-        string bdd = "server=localhost;user id=Nathan;database=ppe;Pwd=azerty";
+        String type; 
 
         class ComboValue
         {
@@ -34,7 +32,7 @@ namespace PPE
             firstName = prenom;
             type = role;
 
-            MySqlConnection conn = new MySqlConnection(bdd);
+            MySqlConnection conn = new MySqlConnection(All.Bdd);
             try
             {
                 conn.Open();
@@ -75,7 +73,7 @@ namespace PPE
             }
             else
             {
-                MySqlConnection conn = new MySqlConnection(bdd);
+                MySqlConnection conn = new MySqlConnection(All.Bdd);
                 try
                 {
                     conn.Open();

@@ -14,7 +14,6 @@ namespace PPE
 {
     public partial class EditSalon : Form
     {
-        string bdd = "server=localhost;user id=Nathan;database=ppe;Pwd=azerty";
 
         public string id { get; set; }
         public string nom { get; set; }
@@ -43,7 +42,7 @@ namespace PPE
             }
             else
             {
-                using (var insertSalon = new MySqlConnection(bdd))
+                using (var insertSalon = new MySqlConnection(All.Bdd))
                 {
                     insertSalon.Open();
 
