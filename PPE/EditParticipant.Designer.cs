@@ -144,7 +144,8 @@ namespace PPE
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.ImageLocation = "C:\\Users\\natou\\source\\repos\\PPE\\PPE\\Resources\\logo-pdf.png";
+            this.pictureBox2.Image = global::PPE.Properties.Resources.logo_pdf_removebg_preview;
+            this.pictureBox2.ImageLocation = "";
             this.pictureBox2.Location = new System.Drawing.Point(465, 289);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(58, 48);
