@@ -22,7 +22,7 @@ namespace PPE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            string bdd = "server=localhost;user id=Nathan;database=ppe;Pwd=azerty";
+
             Login MonFormLogin = new Login();
             MonFormLogin.ShowDialog();
             
@@ -32,7 +32,7 @@ namespace PPE
                 String NomUtilisateur = MonFormLogin.nom;
                 String IdUtilisateur = MonFormLogin.id;
 
-                using (var connection2 = new MySqlConnection(bdd))
+                using (var connection2 = new MySqlConnection(All.Bdd))
                 {
                     connection2.Open();
 
