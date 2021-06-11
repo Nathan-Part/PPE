@@ -43,7 +43,7 @@ namespace PPE
 
                     connection2.Close();
                 }
-
+                MessageBox.Show("Bienvenue");
                 Application.Run(new Home(NiveauUtilisateur, NomUtilisateur, Int32.Parse(IdUtilisateur)));
             }
 

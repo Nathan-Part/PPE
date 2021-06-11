@@ -104,7 +104,7 @@ namespace PPE
             gfx.DrawImage(image, 175, 175);
 
             // on enregistre le document 
-            string filename = "Badge d'identification de " + Prenom + " " + Nom;
+            string filename = "Badge d'identification de " + Prenom + " " + Nom + ".pdf";
             document.Save(filename);
             // on regarde le resultat 
             Process.Start(filename);
